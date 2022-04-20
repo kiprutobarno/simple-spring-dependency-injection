@@ -12,6 +12,6 @@ public class Triangle {
     }
 
     public void draw() {
-        System.out.println("...triange drawn");
+        System.out.println(getType() + " triange drawn");
     }
 }
