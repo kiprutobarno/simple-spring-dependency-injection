@@ -1,37 +1,17 @@
 package com.ywalakamar.di;
 
+import java.util.List;
+
 public class Triangle {
     private String type;
-    private Point pointA;
-    private Point pointB;
-    private Point pointC;
+    private List<Point> points;
 
-    public Point getPointA() {
-        return pointA;
+    public List<Point> getPoints() {
+        return points;
     }
 
-    public Point getPointB() {
-        return pointB;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setPointA(Point pointA) {
-        this.pointA = pointA;
-    }
-
-    public void setPointB(Point pointB) {
-        this.pointB = pointB;
-    }
-
-    public void setPointC(Point pointC) {
-        this.pointC = pointC;
-    }
-
-    public Point getPointC() {
-        return pointC;
+    public void setPoints(List<Point> points) {
+        this.points = points;
     }
 
     public Triangle(String type) {
@@ -43,9 +23,9 @@ public class Triangle {
     }
 
     public void draw() {
-        System.out.println(getType() + " triange drawn with coordinate points ");
-        System.out.println("Point A: (" + getPointA().getX() + ", " + getPointA().getY() + ")");
-        System.out.println("Point B: (" + getPointB().getX() + ", " + getPointB().getY() + ")");
-        System.out.println("Point C: (" + getPointC().getX() + ", " + getPointC().getY() + ")");
+        System.out.println(getType() + " triange drawn with coordinate points: ");
+        for (Point point : points) {
+            System.out.println("(" + point.getX() + ", " + point.getY() + ")");
+        }
     }
 }
