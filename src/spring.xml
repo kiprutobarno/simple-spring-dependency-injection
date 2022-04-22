@@ -16,6 +16,8 @@
         <property name="x" value="20"></property>
         <property name="y" value="0"></property>
     </bean>
-    <bean class="com.ywalakamar.di.DisplayNameBeanPostProcessor" />
+    <bean id="circle" class="com.ywalakamar.di.Circle">
+        <property name="center" ref="pointA"></property>
+    </bean>
 
 </beans>
