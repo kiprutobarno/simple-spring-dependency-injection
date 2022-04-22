@@ -1,6 +1,6 @@
 package com.ywalakamar.di;
 
-public class Triangle {
+public class Triangle implements Shape {
     private String type;
     private Point pointA;
     private Point pointB;
@@ -43,17 +43,9 @@ public class Triangle {
     }
 
     public void draw() {
-        System.out.println(getType() + " triange drawn with coordinate points ");
+        System.out.println("Drawing a Triangle");
         System.out.println("Point A: (" + getPointA().getX() + ", " + getPointA().getY() + ")");
         System.out.println("Point B: (" + getPointB().getX() + ", " + getPointB().getY() + ")");
         System.out.println("Point C: (" + getPointC().getX() + ", " + getPointC().getY() + ")");
-    }
-
-    public void customInit() {
-        System.out.println("Custom init method called for Triangle");
-    }
-
-    public void customDestroy() {
-        System.out.println("Custom destroy method called for Triangle");
     }
 }
