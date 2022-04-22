@@ -1,5 +1,7 @@
 package com.ywalakamar.di;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Circle implements Shape {
 
     Point center;
@@ -15,6 +17,7 @@ public class Circle implements Shape {
         return center;
     }
 
+    @Autowired
     public void setCenter(Point center) {
         this.center = center;
     }
