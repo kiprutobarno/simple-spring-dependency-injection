@@ -1,10 +1,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" default-init-method="customInit" default-destroy-method="customDestroy">
 
-
-    <bean id="triangle" class="com.ywalakamar.di.Triangle" autowire="byName">
-        <constructor-arg type="java.lang.String" value="Equilateral" />
-    </bean>
-    <bean id="pointA" class="com.ywalakamar.di.Point">
+    <bean id="center" class="com.ywalakamar.di.Point">
         <property name="x" value="0"></property>
         <property name="y" value="0"></property>
     </bean>
@@ -16,8 +12,7 @@
         <property name="x" value="20"></property>
         <property name="y" value="0"></property>
     </bean>
-    <bean id="circle" class="com.ywalakamar.di.Circle">
-        <property name="center" ref="pointA"></property>
-    </bean>
+    <bean id="circle" class="com.ywalakamar.di.Circle" />
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 
 </beans>
