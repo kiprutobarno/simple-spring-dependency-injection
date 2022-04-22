@@ -16,5 +16,6 @@
         <property name="x" value="20"></property>
         <property name="y" value="0"></property>
     </bean>
+    <bean class="com.ywalakamar.di.DisplayNameBeanPostProcessor" />
 
 </beans>
